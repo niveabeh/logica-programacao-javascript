@@ -31,7 +31,6 @@ html {
 body {
     background-image: url('../assets/img_background-2.webp');
     color: var(--cor-azul-escuro-100);
-
 }
 
 section {
@@ -40,37 +39,32 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 header {
     width: 100%;
-    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
     margin: auto;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     z-index: 1;
 }
 
 header ul  {
-    width: 1400px;
-    max-width: 100%;
-    padding: 20px 20px;
+
+    max-width: 1400px;
+    width: 90%;
+    padding: 12px 20px;
     margin-top: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    text-decoration: underline 1px #20205440;
-    text-underline-offset: 6px;
-    gap: 2rem;
-    background-color: #ffffffa8;
+    gap: 1rem;
+    background-color: var(--cor-branco-50);
     backdrop-filter: blur(20px);
-    border-radius: 20px;
+    border-radius: 2rem;
     box-shadow:
         inset 2px 2px 6px rgba(0, 0, 0, 0.15),
         inset -2px -2px 6px rgba(255, 255, 255, 0.7),
@@ -88,16 +82,19 @@ nav li .opcao-menu {
     display: inline-block;
     transition: color 0.3s ease;
 }
+nav li .opcao-menu:hover{
+    color: rgb(59, 78, 112);
+}
 nav li a {
     text-decoration: none;
-    color: #FFF;
+    color: var(--cor-branco-100);
     padding: 10px 20px;
     font-weight: 600;
     display: inline-block;
     transition: color 0.3s ease;
 }
 nav li a:hover {
-    color: #CCC;
+    color: #cccccc;
 }
 nav li .sub-categoria {
     display: none;
@@ -114,8 +111,7 @@ nav li .sub-categoria {
 }
 nav li .sub-categoria a {
     padding: 6px 12px;
-    white-space: nowrap;
-    color: #FFF;
+    color: var(--cor-branco-100);
     transition: background-color 0.2s ease;
 }
 nav li .sub-categoria a:hover {
@@ -135,11 +131,6 @@ header a {
     word-spacing: -7px;
 }
 
-header ul li:hover {
-    color: var(--cor-azul-escuro-70);
-    text-decoration: underline 1px #1717b82a;
-}
-
 a {
     text-decoration: none;
 }
@@ -154,7 +145,6 @@ a {
     justify-content: space-between;
     align-items: center;
     margin: auto;
-
 }
 
 .container-inicio-esquerda {
@@ -165,7 +155,7 @@ a {
 }
 
 .container-inicio-esquerda h1 {
-    font-size: 4rem;
+    font-size: 5vw;
     text-transform: uppercase;
 }
 
@@ -199,7 +189,6 @@ a {
 
 .primeiro-botao,
 .btn-explorar,
-.btn-ver-mais,
 .btn-chamada {
 
     border: 1px solid var(--cor-branco-100);
@@ -216,7 +205,6 @@ a {
 
 .primeiro-botao:hover,
 .btn-explorar:hover,
-.btn-ver-mais:hover,
 .btn-chamada:hover {
     background-image: linear-gradient(130deg, rgb(186, 200, 200), rgb(178, 194, 208));
     box-shadow:
@@ -235,18 +223,13 @@ a {
 .btn-chamada {
     padding: 12px;
     border-radius: 16px;
-}
-
-.btn-ver-mais {
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 12px;
+    animation: flutuar1 3s ease-in-out infinite;
+    transition: all 0.5s ease-in-out;
 }
 
 .container-inicio-direita,
 .container-condicionais-direita {
-    max-width: 50%;
-    min-width: 300px;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,6 +242,40 @@ a {
     max-width: 80%;
     height: 80%;
     opacity: 0.2;
+    animation: opaco 3s ease-in-out infinite;
+    transition: all 0.5s ease-in-out;
+}
+@keyframes opaco {
+    0% {
+      opacity: 0.3;
+    }
+  
+    50% {
+
+      opacity: 1;
+    }
+  
+    100% {
+     
+      opacity: 0.3;
+    }
+}
+@keyframes flutuar1 {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  
+    50% {
+      transform: translateY(-10px);
+      opacity: 0.8;
+      box-shadow: 0 0 20px #96b6f1;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
 }
 
 .container-condicionais-esquerda {
@@ -299,7 +316,7 @@ a {
 }
 
 .container-texto-condicionais h2 {
-    font-size: 2rem;
+    font-size: 2.5vw;
     text-transform: uppercase;
     color: var(--cor-azul-escuro-100);
 }
@@ -571,62 +588,6 @@ footer {
 }   
 
 
-@media (min-width: 1280px) {
-
-    .container-inicio,
-    .container-condicionais {
-        max-width: 80%;
-    }
-
-    .container-inicio .container-inicio-esquerda {
-        max-width: 100%;
-    }
-
-    .container-inicio .container-inicio-esquerda h1 {
-        font-size: 4rem;
-    }
-
-    .container-inicio .container-inicio-esquerda p {
-        width: 100%;
-    }
-
-    .container-inicio .container-inicio-direita {
-        max-width: 30%;
-    }
-}
-
-@media (max-width: 1024px) {
-
-    .container-inicio,
-    .container-condicionais {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column-reverse;
-        width: 80%;
-    }
-
-    .container-inicio-esquerda {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        text-align: center;
-    }
-
-    .container-inicio-esquerda p {
-        width: 100%;
-    }
-
-    .container-inicio-direita {
-        max-width: 30%;
-    }
-}
-
-
-
 @media (max-width: 768px) {
     .card {
         width: 100%;
@@ -637,6 +598,10 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 40px;
+    }
+    .container-condicionais{
+        margin: 50px 0px;
+        height: auto;
     }
 
     .container-inicio-esquerda,
@@ -662,11 +627,6 @@ footer {
         align-items: center;
         justify-content: center;
     }
-
-    .container-inicio-esquerda h1 {
-        font-size: 2rem;
-    }
-
     .container-inicio-esquerda p {
         width: 100%;
         font-size: 0.95rem;
@@ -679,20 +639,42 @@ footer {
         align-items: center;
     }
 
-    .primeiro-botao,
-    .btn-chamada {
+    .primeiro-botao{
         width: 100%;
         text-align: center;
     }
 
     .container-inicio-direita img {
-        width: 60%;
+        width: 20%;
         height: auto;
-        opacity: 0.2;
+    }
+    nav li .opcao-menu {
+        font-size: 12px;
+    }
+    
+    .container-texto-condicionais{
+        width: 80%;
+        height: auto;
+    }
+    .container-texto-condicionais p{
+        line-height: 24px;
+
     }
 }
 
 @media (max-width: 576px) {
+    .container-inicio-esquerda p {
+        line-height: 24px;
+    }
     
+    .container-inicio-esquerda p span {
+        color: var(--cor-azul-escuro-90);
+        font-size: 1rem;
+    }
+    nav ul {
+        gap: 2px;
+        padding: 0;
+        margin: 0 20px;
+    }
 }
 
