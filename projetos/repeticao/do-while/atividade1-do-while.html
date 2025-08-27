@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nívea Souza">
+    <meta name="description" content="Projeto de faculdade - site sobre lógica de programação com JavaScript">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Condicionais</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a class="opcao-menu" href="../../../index.html">inicío</a>
+                </li>
+                <li>
+                    <a class="opcao-menu" href="../../../condicionais.html">estruturas condicionais</a>
+                    <div class="sub-categoria">
+                        <a href="condicionais.html#if-else">if else</a>
+                        <a href="condicionais.html#switch-case">switch case</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="opcao-menu" href="../../../repeticao.html">estruturas de repetição</a>
+                    <div class="sub-categoria">
+                        <a href="../../../repeticao.html#for">for</a>
+                        <a href="../../../repeticao.html#while">while</a>
+                        <a href="../../../repeticao.html#do-while">do while</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="opcao-menu" href="../../../vetores.html">vetores</a>
+                    <div class="sub-categoria">
+                        <a href="../../../vetores.html#array">array</a>
+                        <a href="../../../vetores.html#matrix">matrix</a>
+                    </div>
+                </li>
+        </nav>
+        </ul>
+    </header>
+
+    <section id="codigo" class="codigo">
+        <div class="container-condicionais">
+            <div class="container-condicionais-esquerda">
+                <div class="container-explica-codigo">
+                    <h1>Cálculo média de aluno</h1>
+                    <p> calcular a média do aluno usando estrutura if e else </p>
+                </div>
+            </div>
+
+            <div class="container-condicionais-direita">
+
+                <div class="codigo-funcionando">
+                    <pre><code id="codigo">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="pt-br"&gt;
+
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title&gt;Estrutura SE JavaScript&lt;/title&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="css/config.css"&gt;
+                        &lt;script src="js/main.js"&gt;&lt;/script&gt;
+                        &lt;style&gt;
+                            body{
+                                background-color: #faf4fc;
+                            }
+                            section{
+                                margin-top: 0px auto;
+
+                            }
+                            .cadnumint{
+                                width: 300px;
+                                margin: 0px auto;
+                                font-weight: bold;
+                                margin-bottom: 10px;
+                                background-color: #ffd8ff;
+                                border-radius: 20px;
+                                color: #2e2e2e;
+
+                            }
+                            .cadnumint input{
+                                margin: 5px auto;
+                                width: 100%;
+                                padding: 5px 0;
+                                border-radius: 8px;
+                                
+                            }
+
+                            .cadnumint button{
+                                width: 30%;
+                                margin: 0 10%;
+                                background-color: #f4a2f7;
+                                border-radius: 8px;
+                                font-weight: bold;
+                                font-size: 16px;
+                                padding: 4px 0px;
+                            }
+                            .cadnumint button:hover{
+                                background-color: #b812aa;
+                                color: #ffffff;
+                            }
+                            label{
+                                float: left;
+                            }
+                            h2{
+                                text-align: center;
+                                margin-top: 0px;
+                                margin-bottom: 10px;
+                                font-size: 50px;
+                            }
+                    &lt;/style&gt;
+                    &lt;/head&gt;
+
+                   
+
+                    &lt;body&gt;
+                        &lt;section&gt;
+                            &lt;h2&gt;Atividade - Idade Usuário - Estrutura condicional "escolha - caso"(switch())&lt;/h2&gt;
+                            &lt;br&gt;&lt;br&gt;
+                            &lt;font face="arial"&gt;
+                                &lt;form name="frmnumint" action="#" method="get" onsubmit="return procFormulario()"&gt;
+                                    &lt;fieldset class="cadnumint"&gt;
+                                        &lt;legend&gt;Entrada de Dados&lt;/legend&gt;&lt;br&gt;
+                                        &lt;label for="numint"&gt;Informe a sua idade&lt;/label&gt;
+                                        &lt;input type="text" name="txtnumint" id="numint"&gt;&lt;br&gt;&lt;br&gt;
+                                        &lt;button type="reset"&gt;Limpa&lt;/button&gt;&lt;button type="submit"&gt;Enviar&lt;/button&gt;
+                                    &lt;/fieldset&gt;
+                                &lt;/form&gt;
+                            &lt;/font&gt;
+                        &lt;/section&gt;
+                    &lt;/body&gt;
+                    &lt;script&gt;
+                        function procFormulario(){
+                            if(document.frmnumint.txtnumint.value==""){
+                                alert("Preencha o campo idade");
+                                document.frmnumint.txtnumint.focus();
+                                return false;
+                            }else{
+                                let numint = parseInt(document.getElementById('numint').value);
+                                switch (true) {
+
+                                    case(numint &gt;= 0 &amp;&amp; numint &lt;= 3):
+                                        console.log("Bebê");
+                                        return false; 
+                                        break;
+                                    case(numint &gt;= 4 &amp;&amp; numint &lt;= 10):
+                                        console.log("Criança");
+                                        return false; 
+                                        break;
+                                    case(numint &gt;= 11 &amp;&amp; numint &lt;= 18):
+                                        console.log("Adolescente");
+                                        return false; 
+                                        break;
+                                    default: 
+                                        console.log("Adulto");
+                                        return false;
+                                        break;
+                                }
+                            }
+                        }
+                    &lt;/script&gt;
+                    &lt;/html&gt;
+                    </code></pre>
+
+                </div>
+                <button onclick="abrirExemplo('estruturafacaenquanto/atividade1/index.html')" class="btn-explorar">teste você mesmo</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="jscript">
+            <img src="../../../assets/icon-javascript.svg" alt="JavaScript">
+        </div>
+        <div class="container-info-footer">
+            <div class="info-footer">
+                <div class="info">
+                    <a href="../../../condicionais.html" class="title-est">
+                        <p>estruturas condicionais</p>
+                    </a>
+                    <a href="../../../condicionais.html#if-else">
+                        <p>if else</p>
+                    </a>
+                    <a href="../../../condicionais.html#switch-case">
+                        <p>switch case</p>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="../../../repeticao.html" class="title-est">
+                        <p>estruturas de repeticao</p>
+                    </a>
+                    <a href="../../../repeticao.html#for">
+                        <p>for</p>
+                    </a>
+                    <a href="../../../repeticao.html#while">
+                        <p>while</p>
+                    </a>
+                    <a href="../../../repeticao.html#do-while">
+                        <p>do while</p>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="../../../vetores.html" class="title-est">
+                        <p>vetores</p>
+                    </a>
+                    <a href="../../../vetores.html#array">
+                        <p>array</p>
+                    </a>
+                    <a href="../../../vetores.html#matrix">
+                        <p>matrix</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>© copyright 2025 dev nívea souza. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+
+ <script src="../../../js/main.js">
+ </script>
+</body>
+
+</html>

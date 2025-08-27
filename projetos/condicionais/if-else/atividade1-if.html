@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nívea Souza">
+    <meta name="description" content="Projeto de faculdade - site sobre lógica de programação com JavaScript">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Condicionais</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a class="opcao-menu" href="../../../index.html">inicío</a>
+                </li>
+                <li>
+                    <a class="opcao-menu" href="../../../condicionais.html">estruturas condicionais</a>
+                    <div class="sub-categoria">
+                        <a href="condicionais.html#if-else">if else</a>
+                        <a href="condicionais.html#switch-case">switch case</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="opcao-menu" href="../../../repeticao.html">estruturas de repetição</a>
+                    <div class="sub-categoria">
+                        <a href="../../../repeticao.html#for">for</a>
+                        <a href="../../../repeticao.html#while">while</a>
+                        <a href="../../../repeticao.html#do-while">do while</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="opcao-menu" href="../../../vetores.html">vetores</a>
+                    <div class="sub-categoria">
+                        <a href="../../../vetores.html#array">array</a>
+                        <a href="../../../vetores.html#matrix">matrix</a>
+                    </div>
+                </li>
+        </nav>
+        </ul>
+    </header>
+
+    <section id="codigo" class="codigo">
+        <div class="container-condicionais">
+            <div class="container-condicionais-esquerda">
+                <div class="container-explica-codigo">
+                    <h1>Cálculo média de aluno</h1>
+                    <p> calcular a média do aluno usando estrutura if e else </p>
+                </div>
+            </div>
+
+            <div class="container-condicionais-direita">
+
+                <div class="codigo-funcionando">
+                    <pre><code id="codigo">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="pt-br"&gt;
+
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title&gt;Estrutura SE JavaScript&lt;/title&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="css/config.css"&gt;
+                        &lt;script src="js/main.js"&gt;&lt;/script&gt;
+                         &lt;script&gt;
+                        body{
+                            background-color: #faf4fc;
+                        }
+                        section{
+                            margin-top: 0px auto;
+                        }
+                        /* configuração da página */
+                        .cadmediaaluno1{
+                            width: 300px;
+                            margin: 0px auto;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                            background-color: #ffd8ff;
+                            border-radius: 20px;
+                            color: #2e2e2e;
+                        }
+                        .cadmediaaluno1 input{
+                            margin: 5px auto;
+                            width: 100%;
+                            padding: 5px 0;
+                            border-radius: 8px;
+                        }
+                        .cadmediaaluno1 button{
+                            width: 30%;
+                            margin: 0 10%;
+                            background-color: #f4a2f7;
+                            border-radius: 8px;
+                            font-weight: bold;
+                            font-size: 16px;
+                            padding: 4px 0px;
+                        }
+                        .cadmediaaluno1 button:hover{
+                            background-color: #b812aa;
+                            color: #ffffff;
+                        }
+                        label{
+                            float: left;
+                        }
+                        h2{
+                            text-align: center;
+                            margin-top: 0px;
+                            margin-bottom: 10px;
+                            font-size: 50px;
+                        }
+                    &lt;/script&gt;
+                    &lt;/head&gt;
+
+                   
+
+                    &lt;body&gt;
+                        &lt;section&gt;
+                            &lt;h2&gt;Atividade - Cálculo média de aluno - Estrutura condicional "se"(if)&lt;/h2&gt;
+                            &lt;font face="arial"&gt;
+                                &lt;form name="frmnotas" action="#" method="get" onsubmit="return procFormulario()"&gt;
+                                    &lt;fieldset class="cadmediaaluno1"&gt;
+                                        &lt;legend&gt;Entrada de Dados&lt;/legend&gt;&lt;br&gt;
+                                        &lt;label for="num1"&gt;Nota 1&lt;/label&gt;
+                                        &lt;input type="text" name="txtnum1" id="num1"&gt;&lt;br&gt;&lt;br&gt;
+                                        &lt;label for="num2"&gt;Nota 2&lt;/label&gt;
+                                        &lt;input type="text" name="txtnum2" id="num2"&gt;&lt;br&gt;&lt;br&gt;
+                                        &lt;label for="num3"&gt;Nota 3&lt;/label&gt;
+                                        &lt;input type="text" name="txtnum3" id="num3"&gt;&lt;br&gt;&lt;br&gt;
+                                        &lt;button type="reset"&gt;Limpa&lt;/button&gt;&lt;button type="submit"&gt;Enviar&lt;/button&gt;
+                                    &lt;/fieldset&gt;
+                                &lt;/form&gt;
+                            &lt;/font&gt;
+                        &lt;/section&gt;
+                    &lt;/body&gt;
+
+                    &lt;script&gt;
+                        function procFormulario(){
+                            if(document.frmnotas.txtnum1.value==""){
+                                alert("Preencha o campo Num 1");
+                                document.frmnotas.txtnum1.focus();
+                                return false;
+                            }else if(document.frmnotas.txtnum2.value==""){
+                                alert("Preencha o campo Num 2");
+                                document.frmnotas.txtnum2.focus();
+                                return false;
+                            }else if(document.frmnotas.txtnum3.value==""){
+                                alert("Preencha o campo Num 3");
+                                document.frmnotas.txtnum3.focus();
+                                return false;
+                            }else{
+                                //Processamento do programa...
+                                //parseFloat() função para transformar o caracter em float
+                                let nota1 = parseFloat(document.getElementById('num1').value);
+                                let nota2 = parseFloat(document.getElementById('num2').value);
+                                let nota3 = parseFloat(document.getElementById('num3').value);
+                                let media = (nota1+ nota2 + nota3)/ 3
+                                if(media&gt;=7){
+                                    alert("Sua média foi "+media.toFixed(2)+"! Você foi aprovado")
+                                }else if( media &lt; 6.9 &amp;&amp; media &gt;= 5){
+                                    alert("Sua média foi "+ media.toFixed(2)+"! Você está de recuperação")
+                                }else if( media &lt; 5 ){
+                                    alert("Sua média foi "+media.toFixed(2)+"! Você foi reprovado")
+                                }
+                            }
+                        }
+                    &lt;/script&gt;
+                    &lt;/html&gt;
+                    </code></pre>
+
+                </div>
+                <button onclick="abrirExemplo('estruturase/atividade1/index.html')" class="btn-explorar">teste você mesmo</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="jscript">
+            <img src="../../../assets/icon-javascript.svg" alt="JavaScript">
+        </div>
+        <div class="container-info-footer">
+            <div class="info-footer">
+                <div class="info">
+                    <a href="../../../condicionais.html" class="title-est">
+                        <p>estruturas condicionais</p>
+                    </a>
+                    <a href="../../../condicionais.html#if-else">
+                        <p>if else</p>
+                    </a>
+                    <a href="../../../condicionais.html#switch-case">
+                        <p>switch case</p>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="../../../repeticao.html" class="title-est">
+                        <p>estruturas de repeticao</p>
+                    </a>
+                    <a href="../../../repeticao.html#for">
+                        <p>for</p>
+                    </a>
+                    <a href="../../../repeticao.html#while">
+                        <p>while</p>
+                    </a>
+                    <a href="../../../repeticao.html#do-while">
+                        <p>do while</p>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="../../../vetores.html" class="title-est">
+                        <p>vetores</p>
+                    </a>
+                    <a href="../../../vetores.html#array">
+                        <p>array</p>
+                    </a>
+                    <a href="../../../vetores.html#matrix">
+                        <p>matrix</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>© copyright 2025 dev nívea souza. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+
+ <script src="../../../js/main.js">
+ </script>
+</body>
+
+</html>

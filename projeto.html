@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nívea Souza">
+    <meta name="description" content="Projeto de faculdade - site sobre lógica de programação com JavaScript">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Condicionais</title>
+</head>
+
+<body>
+     <header>
+        <nav>
+            <ul>
+                <li>
+                    <a class="opcao-menu" href="index.html">inicío</a>
+                </li>
+                <li>
+                    <a class="opcao-menu" href="#condicionais">estruturas condicionais</a>
+                    <div class="sub-categoria">
+                        <a href="condicionais.html#if-else">if else</a>
+                        <a href="condicionais.html#switch-case">switch case</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="opcao-menu" href="#repeticao">estruturas de repetição</a>
+                    <div class="sub-categoria">
+                        <a href="repeticao.html#for">for</a>
+                        <a href="repeticao.html#while">while</a>
+                        <a href="repeticao.html#do-while">do while</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="opcao-menu" href="#vetores">vetores</a>
+                    <div class="sub-categoria">
+                        <a href="vetores.html#array">array</a>
+                        <a href="vetores.html#matrix">matrix</a>
+                    </div>
+                </li>
+        </nav>
+        </ul>
+    </header>
+
+    <section id="codigo" class="codigo">
+        <div class="container-condicionais">
+            <div class="container-condicionais-esquerda">
+                <div class="container-explica-codigo">
+                    <h1>explicação do código</h1>
+                    <p> lorem ipsum dolor sit amet consectetur adipiscing elit </p>
+                </div>
+            </div>
+
+            <div class="container-condicionais-direita">
+
+                <div class="codigo-funcionando">
+                    <pre><code>
+
+                        
+                    &lt;script&gt;
+                        function calcular(operador) {
+                            const num1 = parseFloat(document.getElementById("num1").value);
+                            const num2 = parseFloat(document.getElementById("num2").value);
+                            let resultado = "";
+
+                        if (isNaN(num1) || isNaN(num2)) {
+                            resultado = "Por favor, insira dois números válidos.";
+                        } else {
+                            switch (operador) {
+                                case '+':
+                                    resultado = num1 + num2;
+                                    break;
+                                case '-':
+                                    resultado = num1 - num2;
+                                    break;
+                                case '*':
+                                    resultado = num1 * num2;
+                                    break;
+                                case '/':
+                                    resultado = num2 !== 0 ? num1 / num2 : "Erro: divisão por zero!";
+                                    break;
+                            }
+                        }
+
+                        document.getElementById("resultado").innerText = "Resultado: " + resultado;
+                            }
+                    &lt;/script&gt;
+                    </code></pre>
+                </div>
+                <a class="btn-explorar" href="condicionais.html">teste você mesmo</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="jscript">
+            <img src="assets/icon-javascript.svg" alt="">
+        </div>
+        <div class="container-info-footer">
+            <div class="info-footer">
+                <div class="info">
+                    <a href="condicionais.html" class="title-est"><p>estruturas condicionais</p></a>
+                    <a href="condicionais.html#if-else">
+                        <p>if else</p>
+                    </a>
+                    <a href="condicionais.html#switch-case">
+                        <p>switch case</p>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="repeticao.html" class="title-est"><p>estruturas de repeticao</p></a>
+                    <a href="repeticao.html#for">
+                        <p>for</p>
+                    </a>
+                    <a href="repeticao.html#while">
+                        <p>while</p>
+                    </a>
+                    <a href="repeticao.html#do-while">
+                        <p>do while</p>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="vetores.html" class="title-est"><p>vetores</p></a>
+                    <a href="vetores.html#array">
+                        <p>array</p>
+                    </a>
+                    <a href="vetores.html#matrix">
+                        <p>matrix</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>© copyright 2025 dev nívea souza. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

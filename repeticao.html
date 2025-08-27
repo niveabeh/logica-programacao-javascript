@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nívea Souza">
+    <meta name="description" content="Projeto de faculdade - site sobre lógica de programação com JavaScript">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Condicionais</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a class="opcao-menu" href="index.html">inicío</a>
+                </li>
+                <li>
+                    <a class="opcao-menu" href="#condicionais">estruturas condicionais</a>
+                    <div class="sub-categoria">
+                        <a href="condicionais.html#if-else">if else</a>
+                        <a href="condicionais.html#switch-case">switch case</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="opcao-menu" href="#repeticao">estruturas de repetição</a>
+                    <div class="sub-categoria">
+                        <a href="repeticao.html#for">for</a>
+                        <a href="repeticao.html#while">while</a>
+                        <a href="repeticao.html#do-while">do while</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="opcao-menu" href="#vetores">vetores</a>
+                    <div class="sub-categoria">
+                        <a href="vetores.html#array">array</a>
+                        <a href="vetores.html#matrix">matrix</a>
+                    </div>
+                </li>
+        </nav>
+        </ul>
+    </header>
+
+    <section>
+        <div class="container-pagina-condicionais">
+            <img class="img-pagina-condicionais" src="assets/loop.svg" alt="">
+            <div class="caixa-info-pagina-condicionais">
+                <h1>estrutura de repetição</h1>
+                <p>As estruturas de repetição em JavaScript são essenciais para executar um bloco de código várias vezes
+                    automaticamente, facilitando tarefas repetitivas e deixando o código mais eficiente. As principais
+                    são o for: usada quando se sabe o número exato de repetições combinando inicialização, condição e
+                    incremento em uma linha; o while, que repete o código enquanto uma condição for verdadeira, ideal
+                    quando não se sabe quantas
+                    vezes será necessário executar; e o do...while, similar ao while, mas garante que o código seja
+                    executado ao menos uma vez antes de
+                    checar a condição. Essas estruturas ajudam a criar programas mais dinâmicos, organizados e fáceis de
+                    manter.</p>
+            </div>
+            <a class="btn-chamada" href="#for"><img src="assets/arrow-down.svg" alt="seta para baixo"></a>
+        </div>
+    </section>
+    <section id="for" class="condicionais">
+        <div class="container-condicionais">
+            <div class="container-condicionais-esquerda">
+                <div class="container-texto-condicionais">
+                    <h2>for</h2>
+                    <p>A estrutura for é uma das mais utilizadas. Ela permite executar uma sequência de comandos um
+                        número determinado de vezes. É muito útil quando o número de repetições é conhecido de antemão,
+                        como ao percorrer uma lista de elementos ou realizar cálculos iterativos. Seu formato compacto
+                        combina início, condição de parada e incremento em uma única linha, o que facilita o controle do
+                        loop.</p>
+                </div>
+            </div>
+            <div class="container-condicionais-direita">
+                <a class="card" href="projetos/repeticao/for/atividade1-for.html">
+
+                    <div class="img-card-condicionais" alt="Imagem ilustrativa Padrão sobre If e else"></div>
+                    <h3>Atividade 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.
+                        Lacus tincidunt etiam vitae massa risus.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="while" class="condicionais">
+        <div class="container-condicionais">
+            <div class="container-condicionais-esquerda">
+                <div class="container-texto-condicionais">
+                    <h2>while</h2>
+                    <p>A estrutura while executa um bloco de código enquanto uma condição for verdadeira. Ao contrário
+                        do for, o while é ideal para situações em que não se sabe quantas vezes o código precisa ser
+                        repetido, mas se sabe a condição que determina a continuação da execução. Ele é especialmente
+                        útil em cenários de espera, verificações contínuas ou interações com o usuário.</p>
+                </div>
+            </div>
+            <div class="container-condicionais-direita">
+                <a class="card" href="projetos/repeticao/while/atividade1-while.html">
+
+                    <div class="img-card-condicionais" alt="Imagem ilustrativa Padrão sobre If e else"></div>
+                    <h3>atividade 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.
+                        Lacus tincidunt etiam vitae massa risus.</p>
+                </a>
+                <a class="card" href="projetos/repeticao/while/atividade2-while.html">
+
+                    <div class="img-card-condicionais" alt="Imagem ilustrativa Padrão sobre If e else"></div>
+                    <h3>atividade 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.
+                        Lacus tincidunt etiam vitae massa risus.</p>
+
+                </a>
+                <a class="card" href="projetos/repeticao/while/atividade3-while.html">
+
+                    <div class="img-card-condicionais" alt="Imagem ilustrativa Padrão sobre If e else"></div>
+                    <h3>atividade 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.
+                        Lacus tincidunt etiam vitae massa risus.</p>
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="do-while" class="condicionais">
+        <div class="container-condicionais">
+            <div class="container-condicionais-esquerda">
+                <div class="container-texto-condicionais">
+                    <h2>do while</h2>
+                    <p>O do...while é semelhante ao while, mas com uma diferença importante: ele garante que o bloco de
+                        código será executado pelo menos uma vez, mesmo que a condição seja falsa desde o início. Isso
+                        acontece porque a verificação da condição ocorre após a execução do bloco. Essa estrutura é útil
+                        quando é necessário executar uma ação inicial antes de verificar se deve continuar repetindo.
+                    </p>
+                </div>
+            </div>
+            <div class="container-condicionais-direita">
+                <a class="card" href="projetos/repeticao/do-while/atividade1-do-while.html">
+
+                    <div class="img-card-condicionais" alt="Imagem ilustrativa Padrão sobre If e else"></div>
+                    <h3>atividade 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.
+                        Lacus tincidunt etiam vitae massa risus.</p>
+
+                </a>
+                <a class="card" href="projetos/repeticao/do-while/atividade2-do-while.html">
+
+                    <div class="img-card-condicionais" alt="Imagem ilustrativa Padrão sobre If e else"></div>
+                    <h3>atividade 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.
+                        Lacus tincidunt etiam vitae massa risus.</p>
+                   
+                </a>
+                <a class="card" href="projetos/repeticao/do-while/atividade3-do-while.html">
+
+                    <div class="img-card-condicionais" alt="Imagem ilustrativa Padrão sobre If e else"></div>
+                    <h3>atividade 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.
+                        Lacus tincidunt etiam vitae massa risus.</p>
+    
+                </a>
+            </div>
+        </div>
+    </section>
+
+     <footer>
+        <div class="jscript">
+            <img src="assets/icon-javascript.svg" alt="">
+        </div>
+        <div class="container-info-footer">
+            <div class="info-footer">
+                <div class="info">
+                    <a href="condicionais.html" class="title-est"><p>estruturas condicionais</p></a>
+                    <a href="condicionais.html#if-else">
+                        <p>if else</p>
+                    </a>
+                    <a href="condicionais.html#switch-case">
+                        <p>switch case</p>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="repeticao.html" class="title-est"><p>estruturas de repeticao</p></a>
+                    <a href="repeticao.html#for">
+                        <p>for</p>
+                    </a>
+                    <a href="repeticao.html#while">
+                        <p>while</p>
+                    </a>
+                    <a href="repeticao.html#do-while">
+                        <p>do while</p>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="vetores.html" class="title-est"><p>vetores</p></a>
+                    <a href="vetores.html#array">
+                        <p>array</p>
+                    </a>
+                    <a href="vetores.html#matrix">
+                        <p>matrix</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>© copyright 2025 dev nívea souza. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

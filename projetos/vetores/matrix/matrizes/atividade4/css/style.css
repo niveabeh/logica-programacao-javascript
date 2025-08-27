@@ -1,0 +1,105 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #2c2c2c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #0a61e4;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+form {
+    width: 100%;
+}
+
+.cadinteiro {
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.cadinteiro input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.cadinteiro input:focus {
+    border-color: #0a61e4;
+    outline: none;
+}
+.logo-senai{
+    display: block;
+    margin: 0 auto 20px;
+    width: 150px;
+    height: auto;
+}
+
+.btn-enviar,
+.btn-limpar {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-enviar {
+    background-color: #0a61e4;
+    color: white;
+}
+
+.btn-enviar:hover {
+    background-color: #084ec2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 97, 228, 0.3);
+}
+
+.btn-limpar {
+    background-color: #e42b2b;
+    color: white;
+}
+
+.btn-limpar:hover {
+    background-color: #c72020;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(228, 43, 43, 0.3);
+}

@@ -1,0 +1,48 @@
+body{
+    background-color: #faf4fc;
+}
+section{
+    margin-top: 0px auto;
+
+}
+/* configuração da página */
+.cadlernumeros{
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: #ffd8ff;
+    border-radius: 20px;
+    color: #2e2e2e;
+
+}
+.cadlernumeros input{
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px 0;
+    border-radius: 8px;
+    
+}
+
+.cadlernumeros button{
+    width: 30%;
+    margin: 0 10%;
+    background-color: #f4a2f7;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 4px 0px;
+}
+.cadlernumeros button:hover{
+    background-color: #b812aa;
+    color: #ffffff;
+}
+label{
+    float: left;
+}
+h2{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
