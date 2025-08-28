@@ -61,7 +61,178 @@
             <div class="container-condicionais-direita">
 
                 <textarea  id="codigo-funcionando">
+                <!DOCTYPE html>
+                <html lang="pt-br">
 
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <style>
+                        * {
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: border-box;
+                        }
+
+                        body {
+                            background-color: #f0f4f8;
+                            color: #2c2c2c;
+                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            line-height: 1.6;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            min-height: 100vh;
+                            padding: 20px;
+                        }
+
+                        section {
+                            width: 100%;
+                            max-width: 500px;
+                            padding: 20px;
+                            background-color: white;
+                            border-radius: 16px;
+                            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                        }
+
+
+                        h2 {
+                            text-align: center;
+                            font-size: 32px;
+                            color: #0a61e4;
+                            margin-bottom: 20px;
+                            text-transform: uppercase;
+                        }
+
+                        .logo-senai {
+                            display: block;
+                            margin: 0 auto 20px;
+                            width: 150px;
+                            height: auto;
+                        }
+
+
+                        form {
+                            width: 100%;
+                        }
+
+                        fieldset {
+                            border: none;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+                            padding: 20px;
+                            background: #fff;
+                            border-radius: 16px;
+                            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+                        }
+
+                        legend {
+                            font-weight: bold;
+                            font-size: 1.1rem;
+                        }
+
+                        label {
+                            font-weight: bold;
+                            margin-bottom: 5px;
+                            display: block;
+                        }
+
+                        input {
+                            padding: 10px;
+                            border: 1px solid #ccc;
+                            border-radius: 10px;
+                            font-size: 1rem;
+                            transition: border-color 0.3s ease;
+                        }
+
+                        input:focus {
+                            border-color: #0a61e4;
+                            outline: none;
+                        }
+                        .botoes {
+                            display: flex;
+                            justify-content: space-between;
+                            gap: 10px;
+                        }
+
+                        .btn-enviar,
+                        .btn-limpar {
+                            padding: 10px 20px;
+                            font-size: 1rem;
+                            border: none;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                            width: 100%;
+                        }
+
+                        .btn-enviar {
+                            background-color: #0a61e4;
+                            color: white;
+                        }
+
+                        .btn-enviar:hover {
+                            background-color: #084ec2;
+                            transform: translateY(-2px);
+                            box-shadow: 0 4px 12px rgba(10, 97, 228, 0.3);
+                        }
+
+                        .btn-limpar {
+                            background-color: #e42b2b;
+                            color: white;
+                        }
+
+                        .btn-limpar:hover {
+                            background-color: #c72020;
+                            transform: translateY(-2px);
+                            box-shadow: 0 4px 12px rgba(228, 43, 43, 0.3);
+                        }
+
+                        .cadinteiro {
+                            width: 100%;
+                        }
+                    </style>
+                    <title>Tabuada</title>
+                </head>
+
+                <body>
+                    <section>
+                        <img src="assets/img/marca_senai.png" alt="Logo SENAI" class="logo-senai">
+
+                        <h2>Atividade - Tabuada (Estrutura "para" - for)</h2>
+
+                        <form name="frmnumint" action="#" method="get" onsubmit="return validaProc()">
+                            <fieldset class="cadinteiro">
+                                <legend>Entrada de Dados</legend>
+
+                                <label for="numint">Tabuada de:</label>
+                                <input type="text" id="numint" placeholder="Digite um número">
+
+                                <div class="botoes">
+                                    <button type="reset" class="btn-limpar">Limpar</button>
+                                    <button type="submit" class="btn-enviar">Enviar</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </section>
+
+                    <script>
+                        function validaProc(){
+                            if(document.getElementById('numint').value == ""){
+                                alert("Por favor preencha o campo")
+                                document.frmtabuada.focus();
+                                return false;
+                            }
+                            let numero = perseInt(document.getElementById('numint').value)
+                            for(let i =1; i < 11;i++){
+                                console.log(numero + " x " + i +" = "+ numero * i)
+                            }
+                        }
+                    </script>
+                </body>
+
+                </html>
                 </textarea>
                 
                 <button onclick="abrirExemplo('estruturaparafaca/atividade1/index.html')" class="btn-explorar">teste

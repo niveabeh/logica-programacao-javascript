@@ -1,6 +1,5 @@
 
 function validaProc(){
-    // Faça um algoritmo que leia 3 números e imprima seu somatório...
     let i = 1;
     let acumulador = 0;
     while( i <= 3){
