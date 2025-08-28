@@ -166,6 +166,12 @@ a {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+
+}
+.container-condicionais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-inicio-esquerda {
@@ -577,6 +583,7 @@ footer {
         font-size: 4vw;
         text-align: center;
     }
+    
     .card {
         max-width: 45%;
         height: auto;
@@ -603,6 +610,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+   
      .container-inicio {
         flex-direction: column-reverse;
         display: flex;
