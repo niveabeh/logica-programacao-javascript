@@ -1,60 +1,125 @@
-/* Configurações gerais */
-section{
-    margin-top: 0px auto;
-}
-/* Configuração da Formulário */
-body{
- background-color: #e9f2f586;
- color: rgba(44, 44, 44, 0.897);
-}
-.cadinteiro{
-    width: 300px;
-    margin: 0px auto;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.cadinteiro input{
-    margin: 5px auto;
-    width: 100%;
-    padding: 5px 0;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-label{
-    float: left;
+body {
+    background-color: #f0f4f8;
+    color: #2c2c2c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
-h2{
+
+section {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
     text-align: center;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: 50px;
+    font-size: 32px;
+    color: #0a61e4;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
-.btn-enviar{
-    padding: 8px 20px;
-    border: 1px solid #0a61e4;
-    background-color: #b1ccf5;
-    color: rgb(6, 5, 44);
-    border-radius: 2rem;
+
+.logo-senai {
+    display: block;
+    margin: 0 auto 20px;
+    width: 150px;
+    height: auto;
+}
+
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     font-size: 1rem;
-    transition: all 0.3s ease;
-    width: auto;
+    transition: border-color 0.3s ease;
 }
-.btn-enviar:hover{
-    transform: translateY(-4px);
-    box-shadow: 2px 2px 20px #2e5ea596;
-    background-color: #91b8f1;
+
+input:focus {
+    border-color: #0a61e4;
+    outline: none;
 }
-.btn-limpar{
-    padding: 8px 20px;
-    border: 1px solid #880404;
-    background-color: #e42b2bc4;
-    color: rgb(44, 6, 5);
-    border-radius: 2rem;
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn-enviar,
+.btn-limpar {
+    padding: 10px 20px;
     font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
     transition: all 0.3s ease;
-    width: auto;
+    width: 100%;
 }
-.btn-limpar:hover{
-    transform: translateY(-4px);
-    box-shadow: #a52e2e4b;
-    background-color: #f19191;
+
+.btn-enviar {
+    background-color: #0a61e4;
+    color: white;
+}
+
+.btn-enviar:hover {
+    background-color: #084ec2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 97, 228, 0.3);
+}
+
+.btn-limpar {
+    background-color: #e42b2b;
+    color: white;
+}
+
+.btn-limpar:hover {
+    background-color: #c72020;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(228, 43, 43, 0.3);
+}
+
+.cadinteiro {
+    width: 100%;
 }

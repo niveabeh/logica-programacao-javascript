@@ -8,16 +8,25 @@
 </head>
 <body>
     <section>
-        <img src="assets/img/marca_senai.png" alt="Marca SENAI" class="logo-senai">
-        <h2>while - Exemplo</h2>
-        <form  name="frmformulario" action="#" method="get" onsubmit="return validaProc()">
+        <img src="assets/img/marca_senai.png" alt="Logo SENAI" class="logo-senai">
+
+        <h2>Exemplo - Estrutura "enquanto" (while)</h2>
+
+        <form name="frmformulario" action="#" method="get" onsubmit="return validaProc()">
             <fieldset class="cadinteiro">
                 <legend>Entrada de dados</legend>
-                <button class="btn-enviar">Enviar</button>
-                <button class="btn-limpar">Limpar</button>
-             </fieldset>
+
+                <label for="numerouser">Informe um número</label>
+                <input type="text" id="numerouser">
+
+                <div class="botoes">
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                    <button type="reset" class="btn-limpar">Limpar</button>
+                </div>
+            </fieldset>
         </form>
-    </section>  
+    </section>
+ 
     <script src="js/main.js"></script>
 </body>
 </html>

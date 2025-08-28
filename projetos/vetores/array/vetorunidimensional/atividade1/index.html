@@ -10,18 +10,31 @@
 
 <body>
     <section>
-        <img src="assets/img/marca_senai.png" alt="Marca SENAI" class="logo-senai">
-            <h2>do...while</h2>
-            <form  name="frmformulario" action="#" method="get" onsubmit="return validaProc()">
-                <fieldset class="cadinteiro">
-                    <legend>Entrada de dados</legend>
-                    <label for="numero">Informe o número</label>
-                    <input type="text" name="" id="numero">
-                    <button class="btn-enviar" type="submit">Enviar</button>
-                    <button class="btn-limpar">Limpar</button>
-                 </fieldset>
-            </form>
+        <img src="assets/img/marca_senai.png" alt="Logo SENAI" class="logo-senai">
+
+        <h2>Relatório de Notas - Alunos</h2>
+
+        <form name="frmnotas" action="#" method="get" onsubmit="return validaProc()">
+            <fieldset class="cadinteiro">
+                <legend>Entrada de notas</legend>
+
+                <label for="nota1">Nota 1</label>
+                <input type="text" id="nota1">
+
+                <label for="nota2">Nota 2</label>
+                <input type="text" id="nota2">
+
+                <label for="nota3">Nota 3</label>
+                <input type="text" id="nota3">
+
+                <div class="botoes">
+                    <button type="reset" class="btn-limpar">Limpar</button>
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </div>
+            </fieldset>
+        </form>
     </section>
+
     <script src="js/main.js"></script>
 </body>
 

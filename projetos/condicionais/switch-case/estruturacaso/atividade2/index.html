@@ -5,24 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estrutura SE JavaScript</title>
-    <link rel="stylesheet" type="text/css" href="css/config.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/main.js"></script>
 </head>
 
 <body>
     <section>
-        <h2>Atividade - Idade Usuário - Estrutura condicional "escolha - caso"(switch())</h2>
-        <br><br>
-        <font face="arial">
-            <form name="frmnumint" action="#" method="get" onsubmit="return procFormulario()">
-                <fieldset class="cadnumint">
-                    <legend>Entrada de Dados</legend><br>
-                    <label for="numint">Informe a sua idade</label>
-                    <input type="text" name="txtnumint" id="numint"><br><br>
-                    <button type="reset">Limpa</button><button type="submit">Enviar</button>
-                </fieldset>
-            </form>
-        </font>
+        <img src="assets/img/marca_senai.png" alt="Logo SENAI" class="logo-senai">
+
+        <h2>Atividade - Comparação de Números</h2>
+
+        <form name="frmcompnumeros" action="#" method="get" onsubmit="return procFormulario()">
+            <fieldset class="cadcompnumeros">
+                <legend>Entrada de Dados</legend>
+
+                <label for="num1">Número 1</label>
+                <input type="text" name="txtnum1" id="num1">
+
+                <label for="num2">Número 2</label>
+                <input type="text" name="txtnum2" id="num2">
+
+                <div class="botoes">
+                    <button type="reset" class="btn-limpar">Limpar</button>
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </div>
+            </fieldset>
+        </form>
     </section>
 </body>
 

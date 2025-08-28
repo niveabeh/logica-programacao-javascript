@@ -11,20 +11,27 @@
 
 <body>
     <section>
+        <img src="assets/img/marca_senai.png" alt="Logo SENAI" class="logo-senai">
         <h2>Atividade - Comparação de número - Estrutura condicional "se"(if)</h2>
-        <font face="arial">
-            <form name="frmnotas" action="#" method="get" onsubmit="return procFormulario()">
-                <fieldset class="cadlernumeros">
-                    <legend>Entrada de Dados</legend><br>
-                    <label for="num1">Nota 1</label>
-                    <input type="text" name="txtnum1" id="num1"><br><br>
-                    <label for="num2">Nota 2</label>
-                    <input type="text" name="txtnum2" id="num2"><br><br>
-                    <button type="reset">Limpa</button><button type="submit">Enviar</button>
-                </fieldset>
-            </form>
-        </font>
+
+        <form name="frmnotas" action="#" method="get" onsubmit="return procFormulario()">
+            <fieldset class="cadlernumeros">
+                <legend>Entrada de Dados</legend>
+
+                <label for="num1">Número 1</label>
+                <input type="text" name="txtnum1" id="num1">
+
+                <label for="num2">Número 2</label>
+                <input type="text" name="txtnum2" id="num2">
+
+                <div class="botoes">
+                    <button type="reset" class="btn-limpar">Limpar</button>
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </div>
+            </fieldset>
+        </form>
     </section>
+
 </body>
 
 </html>

@@ -1,12 +1,8 @@
 function validaProc() {
-   //   Alimentar uma matriz (3x3) de valores inteiros multiplicando 
-   //   essa matriz por um valor informado pelo usuário e escrevendo o conteúdo da 
-   //   matriz multiplicada.
    
       let matriz = [], resp =[];
       let linha = 3;
       let coluna = 3;
-      // Alimentar a matriz
       for(let i = 0; i < linha;i++){
          matriz[i]=[]
          for(let y = 0; y <coluna; y++){

@@ -10,22 +10,25 @@
 
 <body>
     <section>
-        <p>Desenvolva uma aplicação web que a partir de um número inteiro informado </p>
-        <h2>Atividade2 = Tabuada -Estrutura "para"...(for)</h2>
-        <font face="arial">
-            <form name="frmnumint" action="#" method="get" onsubmit="return validaProc()">
-                <fieldset class="cadinteiro">
-                    <legend>Entrada de Dados</legend>
-                    <label for="numint">Tabuada de</label><br>
-                    <input type="text" id="numint" placeholder="numero">
-                    <br>
-                    <button class="btn-limpar">Limpar</button>
-                    <button class="btn-enviar">Enviar</button>
-                </fieldset>
-            </form>
-        </font>
-    
+        <img src="assets/img/marca_senai.png" alt="Logo SENAI" class="logo-senai">
+
+        <h2>Atividade - Tabuada (Estrutura "para" - for)</h2>
+
+        <form name="frmnumint" action="#" method="get" onsubmit="return validaProc()">
+            <fieldset class="cadinteiro">
+                <legend>Entrada de Dados</legend>
+
+                <label for="numint">Tabuada de:</label>
+                <input type="text" id="numint" placeholder="Digite um número">
+
+                <div class="botoes">
+                    <button type="reset" class="btn-limpar">Limpar</button>
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </div>
+            </fieldset>
+        </form>
     </section>
+
     <script src="js/main.js"></script>
 </body>
 

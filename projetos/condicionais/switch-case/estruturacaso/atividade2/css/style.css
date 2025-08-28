@@ -1,48 +1,159 @@
-body{
-    background-color: #faf4fc;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-section{
-    margin-top: 0px auto;
 
+body {
+    background-color: #f0f4f8;
+    color: #2c2c2c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-/* configuração da página */
-.cadnumint{
-    width: 300px;
-    margin: 0px auto;
-    font-weight: bold;
-    margin-bottom: 10px;
-    background-color: #ffd8ff;
-    border-radius: 20px;
-    color: #2e2e2e;
 
-}
-.cadnumint input{
-    margin: 5px auto;
+section {
     width: 100%;
-    padding: 5px 0;
-    border-radius: 8px;
-    
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.cadnumint button{
-    width: 30%;
-    margin: 0 10%;
-    background-color: #f4a2f7;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 4px 0px;
-}
-.cadnumint button:hover{
-    background-color: #b812aa;
-    color: #ffffff;
-}
-label{
-    float: left;
-}
-h2{
+h2 {
     text-align: center;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: 50px;
+    font-size: 32px;
+    color: #0a61e4;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+form {
+    width: 100%;
+}
+
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+.btn-enviar,
+.btn-limpar {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-enviar {
+    background-color: #0a61e4;
+    color: white;
+}
+
+.btn-enviar:hover {
+    background-color: #084ec2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 97, 228, 0.3);
+}
+
+.btn-limpar {
+    background-color: #e42b2b;
+    color: white;
+}
+
+.btn-limpar:hover {
+    background-color: #c72020;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(228, 43, 43, 0.3);
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.cadnumint {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.cadnumint input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.cadnumint input:focus {
+    border-color: #0a61e4;
+    outline: none;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.logo-senai {
+    display: block;
+    margin: 0 auto 20px;
+    width: 150px;
+    height: auto;
+}
+.cadcompnumeros {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.cadcompnumeros input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.cadcompnumeros input:focus {
+    border-color: #0a61e4;
+    outline: none;
+}
+
+.resumo {
+    background: #f0f4f8;
+    border-left: 5px solid #0a61e4;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }

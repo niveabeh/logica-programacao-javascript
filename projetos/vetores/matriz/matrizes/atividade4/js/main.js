@@ -1,5 +1,4 @@
 function validaProc() {
-   // criar, alimentar e imprimir os dados de uma matriz 2x3
 
    let matriz =[];
 
