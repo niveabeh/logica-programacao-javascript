@@ -17,7 +17,4 @@ function validaProc(){
         return false;
     }
  
-   
-//     <!-- Crie um programa para escrever a tabuada de um número digitado pelo usuário -->
-// <!DOCTYPE html>
 }

@@ -1,6 +1,4 @@
 function procFormulario(){
-    //validação de campos
-
     if(document.frmnotas.txtnum1.value==""){
         alert("Preencha o campo Num 1");
         document.frmnotas.txtnum1.focus();
@@ -14,8 +12,6 @@ function procFormulario(){
         document.frmnotas.txtnum3.focus();
         return false;
     }else{
-        //Processamento do programa...
-        //parseFloat() função para transformar o caracter em float
         let nota1 = parseFloat(document.getElementById('num1').value);
         let nota2 = parseFloat(document.getElementById('num2').value);
         let nota3 = parseFloat(document.getElementById('num3').value);
@@ -26,7 +22,6 @@ function procFormulario(){
             alert("Sua média foi "+ media.toFixed(2)+"! Você está de recuperação")
         }else if( media < 5 ){
             alert("Sua média foi "+media.toFixed(2)+"! Você foi reprovado")
-        }
-        
+        } 
     }
 }

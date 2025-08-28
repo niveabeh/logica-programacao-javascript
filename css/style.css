@@ -64,10 +64,13 @@ header {
 .container-inicio-direita {
     flex-wrap: wrap; 
 }
-
-header ul {
-    max-width: 1400px;
-    width: 90%;
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul {  
+    width: 100%;
     padding: 12px 20px;
     margin-top: 8px;
     display: flex;
@@ -99,7 +102,7 @@ nav li .opcao-menu {
 }
 
 nav li .opcao-menu:hover {
-    color: rgb(59, 78, 112);
+    color: rgb(100, 122, 161);
 }
 
 nav li a {
@@ -239,11 +242,12 @@ a {
     color: var(--cor-azul-escuro-70);
     cursor: pointer;
 }
-
-.btn-chamada {
-    padding: 12px;
+.primeiro-botao, .btn-explorar, .btn-chamada{
     animation: flutuar1 3s ease-in-out infinite;
     transition: all 0.5s ease-in-out;
+}
+.btn-chamada {
+    padding: 12px;
 }
 
 .btn-chamada img {
@@ -275,7 +279,23 @@ a {
     flex-direction: column;
     width: 50%;
 }
-
+#codigo-funcionando{
+    background-color: var(--cor-azul-escuro-30);
+    color: var(--cor-azul-escuro-100);
+    max-height: 500px;
+    width: 50vw;   
+    height: 50vh;  
+    resize: none;
+    overflow: auto;
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+    padding: 2rem;
+    border: 2px solid var(--cor-branco-100);
+    box-shadow:
+        inset 2px 2px 6px rgba(0, 0, 0, 0.15),
+        inset -2px -2px 6px rgba(255, 255, 255, 0.7),
+        0px 2px 6px rgba(0, 0, 0, 0.1);
+}
 .container-condicionais-direita {
     display: flex;
     justify-content: center;
@@ -468,8 +488,7 @@ footer {
 }
 
 .caixa-info-pagina-condicionais,
-.container-explica-codigo,
-.codigo-funcionando {
+.container-explica-codigo{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -539,6 +558,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: -5px;
 }
 @media (max-width: 1024px) {
     .container-inicio,
@@ -605,7 +625,7 @@ footer {
         height: 40%;
     }
      .jscript img {
-        width: 70%; 
+        width: 90%; 
     }
 }
 
@@ -654,9 +674,7 @@ footer {
         width: 50%;
         height: 50%;
     }
-    .jscript img {
-        width: 50%; 
-    }
+    
 }
 
 @media (max-width: 576px) {
@@ -711,7 +729,9 @@ footer {
         transform: translateY(0); opacity: 1; 
     }
     50% { 
-        transform: translateY(-10px); opacity: 0.8; box-shadow: 0 0 20px #96b6f1;
+        transform: translateY(-5px); 
+        opacity: 0.8;
+        box-shadow: 0 0 20px #a3bbe7;
     }
     100% { 
         transform: translateY(0); opacity: 1; 

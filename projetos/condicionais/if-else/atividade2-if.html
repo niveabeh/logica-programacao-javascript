@@ -56,90 +56,171 @@
 
             <div class="container-condicionais-direita">
 
-                <div class="codigo-funcionando">
-                    <pre><code id="codigo">
-                    &lt;!DOCTYPE html&gt;
-                    &lt;html lang="pt-br"&gt;
+                <textarea id="codigo-funcionando">
+                    <!DOCTYPE html>
+                    <html lang="pt-br">
 
-                    &lt;head&gt;
-                        &lt;meta charset="UTF-8"&gt;
-                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                        &lt;title&gt;Estrutura SE JavaScript&lt;/title&gt;
-                        &lt;link rel="stylesheet" type="text/css" href="css/config.css"&gt;
-                        &lt;script src="js/main.js"&gt;&lt;/script&gt;
-                         &lt;script&gt;
-                        body{
-                            background-color: #faf4fc;
-                        }
-                        section{
-                            margin-top: 0px auto;
-                        }
-                        /* configuração da página */
-                        .cadmediaaluno1{
-                            width: 300px;
-                            margin: 0px auto;
-                            font-weight: bold;
-                            margin-bottom: 10px;
-                            background-color: #ffd8ff;
-                            border-radius: 20px;
-                            color: #2e2e2e;
-                        }
-                        .cadmediaaluno1 input{
-                            margin: 5px auto;
-                            width: 100%;
-                            padding: 5px 0;
-                            border-radius: 8px;
-                        }
-                        .cadmediaaluno1 button{
-                            width: 30%;
-                            margin: 0 10%;
-                            background-color: #f4a2f7;
-                            border-radius: 8px;
-                            font-weight: bold;
-                            font-size: 16px;
-                            padding: 4px 0px;
-                        }
-                        .cadmediaaluno1 button:hover{
-                            background-color: #b812aa;
-                            color: #ffffff;
-                        }
-                        label{
-                            float: left;
-                        }
-                        h2{
-                            text-align: center;
-                            margin-top: 0px;
-                            margin-bottom: 10px;
-                            font-size: 50px;
-                        }
-                    &lt;/script&gt;
-                    &lt;/head&gt;
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Estrutura SE JavaScript</title>
+                        <style>
+                            * {
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+                            }
 
-                   
+                            body {
+                                background-color: #f0f4f8;
+                                color: #2c2c2c;
+                                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                line-height: 1.6;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                min-height: 100vh;
+                            }
 
-                    &lt;body&gt;
-                        &lt;section&gt;
-                            &lt;h2&gt;Atividade - Cálculo média de aluno - Estrutura condicional "se"(if)&lt;/h2&gt;
-                            &lt;font face="arial"&gt;
-                                &lt;form name="frmnotas" action="#" method="get" onsubmit="return procFormulario()"&gt;
-                                    &lt;fieldset class="cadmediaaluno1"&gt;
-                                        &lt;legend&gt;Entrada de Dados&lt;/legend&gt;&lt;br&gt;
-                                        &lt;label for="num1"&gt;Nota 1&lt;/label&gt;
-                                        &lt;input type="text" name="txtnum1" id="num1"&gt;&lt;br&gt;&lt;br&gt;
-                                        &lt;label for="num2"&gt;Nota 2&lt;/label&gt;
-                                        &lt;input type="text" name="txtnum2" id="num2"&gt;&lt;br&gt;&lt;br&gt;
-                                        &lt;label for="num3"&gt;Nota 3&lt;/label&gt;
-                                        &lt;input type="text" name="txtnum3" id="num3"&gt;&lt;br&gt;&lt;br&gt;
-                                        &lt;button type="reset"&gt;Limpa&lt;/button&gt;&lt;button type="submit"&gt;Enviar&lt;/button&gt;
-                                    &lt;/fieldset&gt;
-                                &lt;/form&gt;
-                            &lt;/font&gt;
-                        &lt;/section&gt;
-                    &lt;/body&gt;
+                            section {
+                                width: 100%;
+                                max-width: 400px;
+                                padding: 20px;
+                                background-color: white;
+                                border-radius: 16px;
+                                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                            }
 
-                    &lt;script&gt;
-                        function procFormulario(){
+                            h2 {
+                                text-align: center;
+                                font-size: 32px;
+                                color: #0a61e4;
+                                margin-bottom: 20px;
+                                text-transform: uppercase;
+                            }
 
+                            form {
+                                width: 100%;
+                            }
+
+                            .cadinteiro {
+                                border: none;
+                                padding: 0;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 15px;
+                            }
+
+                            label {
+                                font-weight: bold;
+                                margin-bottom: 5px;
+                                display: block;
+                            }
+
+                            .cadinteiro input {
+                                padding: 10px 12px;
+                                border: 1px solid #ccc;
+                                border-radius: 10px;
+                                width: 100%;
+                                font-size: 1rem;
+                                transition: border-color 0.3s ease;
+                            }
+
+                            .cadinteiro input:focus {
+                                border-color: #0a61e4;
+                                outline: none;
+                            }
+
+                            .logo-senai {
+                                display: block;
+                                margin: 0 auto 20px;
+                                width: 150px;
+                                height: auto;
+                            }
+
+                            .btn-enviar,
+                            .btn-limpar {
+                                padding: 10px 20px;
+                                font-size: 1rem;
+                                border: none;
+                                border-radius: 10px;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+                                width: 100%;
+                            }
+
+                            .btn-enviar {
+                                background-color: #0a61e4;
+                                color: white;
+                            }
+
+                            .btn-enviar:hover {
+                                background-color: #084ec2;
+                                transform: translateY(-2px);
+                                box-shadow: 0 4px 12px rgba(10, 97, 228, 0.3);
+                            }
+
+                            .btn-limpar {
+                                background-color: #e42b2b;
+                                color: white;
+                            }
+
+                            .btn-limpar:hover {
+                                background-color: #c72020;
+                                transform: translateY(-2px);
+                                box-shadow: 0 4px 12px rgba(228, 43, 43, 0.3);
+                            }
+                            .cadlernumeros {
+                                border: none;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 15px;
+                                padding: 20px;
+                                background: #fff;
+                                border-radius: 16px;
+                                box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+                            }
+
+                            .cadlernumeros input {
+                                padding: 10px;
+                                border: 1px solid #ccc;
+                                border-radius: 10px;
+                                font-size: 1rem;
+                                transition: border-color 0.3s;
+                            }
+
+                            .cadlernumeros input:focus {
+                                border-color: #0a61e4;
+                                outline: none;
+                            }
+
+                            .botoes {
+                                display: flex;
+                                gap: 10px;
+                                justify-content: space-between;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <section>
+                            <img src="assets/img/marca_senai.png" alt="Logo SENAI" class="logo-senai">
+                            <h2>Atividade - Comparação de número - Estrutura condicional "se"(if)</h2>
+                            <form name="frmnotas" action="#" method="get" onsubmit="return procFormulario()">
+                                <fieldset class="cadlernumeros">
+                                    <legend>Entrada de Dados</legend>
+                                    <label for="num1">Número 1</label>
+                                    <input type="text" name="txtnum1" id="num1">
+                                    <label for="num2">Número 2</label>
+                                    <input type="text" name="txtnum2" id="num2">
+                                    <div class="botoes">
+                                        <button type="reset" class="btn-limpar">Limpar</button>
+                                        <button type="submit" class="btn-enviar">Enviar</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </section>
+                        <script>
+                            function procFormulario(){
                             if(document.frmnotas.txtnum1.value==""){
                                 alert("Preencha o campo Num 1");
                                 document.frmnotas.txtnum1.focus();
@@ -149,25 +230,21 @@
                                 document.frmnotas.txtnum2.focus();
                                 return false;
                             }else{
-                                //Processamento do programa...
-                                //parseInt() função para transformar o caracter em inparseInt
                                 let num1 = parseInt(document.getElementById('num1').value);
                                 let num2 = parseInt(document.getElementById('num2').value);
-
                                 if(num1 == num2){
                                     alert("Primeiro número: "+num1.toFixed(2)+"| Segundo número: "+num2.toFixed(2)+" Os números são iguais")
-                                }else if( num1 &gt; num2){
+                                }else if( num1 > num2){
                                     alert(num1.toFixed(2)+" É maior que o segundo número")
                                 }else{
                                     alert(num2.toFixed(2)+" É maior que o primeiro número")
                                 }
-                                
                             }
                         }
-                    &lt;/script&gt;
-                    &lt;/html&gt;
-                    </code></pre>
-                </div>
+                        </script>
+                    </body>
+                    </html>
+                </textarea>
                 <button onclick="abrirExemplo('estruturase/atividade2/index.html')" class="btn-explorar">teste você
                     mesmo</button>
             </div>

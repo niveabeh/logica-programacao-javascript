@@ -1,6 +1,4 @@
 function procFormulario(){
-    //validação de campos
-
     if(document.frmnotas.txtnum1.value==""){
         alert("Preencha o campo Num 1");
         document.frmnotas.txtnum1.focus();
@@ -10,11 +8,8 @@ function procFormulario(){
         document.frmnotas.txtnum2.focus();
         return false;
     }else{
-        //Processamento do programa...
-        //parseInt() função para transformar o caracter em inparseInt
         let num1 = parseInt(document.getElementById('num1').value);
         let num2 = parseInt(document.getElementById('num2').value);
-
         if(num1 == num2){
             alert("Primeiro número: "+num1.toFixed(2)+"| Segundo número: "+num2.toFixed(2)+" Os números são iguais")
         }else if( num1 > num2){
@@ -22,6 +17,5 @@ function procFormulario(){
         }else{
             alert(num2.toFixed(2)+" É maior que o primeiro número")
         }
-        
     }
 }
