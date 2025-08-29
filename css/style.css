@@ -348,7 +348,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 6%;
     height: 300px;
     min-width: 200px;
