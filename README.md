@@ -41,10 +41,10 @@ Se você quiser clonar e rodar o projeto na sua máquina:
 
 ```bash
 # Clone este repositório
-git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+git clone https://github.com/niveabeh/logica-programacao-javascript.git
 
 # Entre na pasta do projeto
-cd SEU_REPOSITORIO
+cd logica-programacao-javascript
 
 # Abra o arquivo index.html no navegador
 
