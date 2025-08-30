@@ -164,7 +164,6 @@ a {
     width: 1400px;
     max-width: 90%;
     height: 100vh;
-    margin: 150px auto 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
